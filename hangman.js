@@ -1,8 +1,8 @@
 var frasesArray = new Array(5);
 frasesArray[0] = "The squeaky wheel gets the grease";
-frasesArray[1] = "The pen is mightier than the sword.";
-frasesArray[2] = "When in Rome, do as the Romans";
-frasesArray[3] = "Two wrongs don't make a right.";
+frasesArray[1] = "The pen is mightier than the sword";
+frasesArray[2] = "When in Rome do as the Romans";
+frasesArray[3] = "Two wrongs do not make a right";
 frasesArray[4] = "You reap what you sow";
 
 function choosing()
@@ -141,7 +141,7 @@ function checkIfClicked(numb)
     
     
 	if (frase == frase1)
-	document.getElementById("letters").innerHTML  = "Well done !  You guessed the frase: "+frase+'<br /><br /><span class="reset" onclick="location.reload()">Wanna play again ?</span>';
+	document.getElementById("letters").innerHTML  = "Well done !  You guessed the frase: "+frase+" with the number of wrong guesses :"+numberOfFailures+ '<br /><br /><span class="reset" onclick="location.reload()">Wanna play again ?</span>';
 	
 	//ifLost
 	if (numberOfFailures>=9)
