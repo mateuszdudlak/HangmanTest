@@ -1,9 +1,39 @@
-var frasesArray = new Array(5);
+var one="";
+var two = "";
+
+   
+    
+
+
+function saveCrap(){
+    
+   one = document.getElementById("nameField").value;
+   two = document.getElementById("nickNameField").value;
+   localStorage.setItem(one,two);
+    
+   display(one,two);
+    
+}
+
+function display(one,two) {
+    one = localStorage.getItem(one);
+   two = localStorage.getItem(two);
+   
+}
+
+
+
+
+
+
+
+
+
+
+var frasesArray = new Array(2);
 frasesArray[0] = "The squeaky wheel gets the grease";
 frasesArray[1] = "The pen is mightier than the sword";
-frasesArray[2] = "When in Rome do as the Romans";
-frasesArray[3] = "Two wrongs do not make a right";
-frasesArray[4] = "You reap what you sow";
+
 
 function choosing()
 {
@@ -36,7 +66,12 @@ function showFrase()
      
 }
 
+
+
+
+
 window.onload = begin;
+
 
 var letters1= new Array(26);
 
@@ -75,6 +110,7 @@ letters1[25] = "Z";
 
 function begin()
 {
+    
     var divContent="";
     
     for(i=0; i<=25; i++)
@@ -141,7 +177,8 @@ function checkIfClicked(numb)
     
     
 	if (frase == frase1)
-	document.getElementById("letters").innerHTML  = "Well done !  You guessed the frase: "+frase+" with the number of wrong guesses :"+numberOfFailures+ '<br /><br /><span class="reset" onclick="location.reload()">Wanna play again ?</span>';
+        
+	document.getElementById("letters").innerHTML  = "Well done !"+ " " + one +" "+ two+ " " +"You guessed the frase: "+frase+" with the number of wrong guesses :"+numberOfFailures+ '<br /><br /><span class="reset" onclick="location.reload()">Wanna play again ?</span>';
 	
 	//ifLost
 	if (numberOfFailures>=9)
